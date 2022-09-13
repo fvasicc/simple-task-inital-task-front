@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="py-5">
+        <form (ngSubmit)="searchAppointments()">
+            <div class="form row">
+                <div class="col-md-2"></div>
+                <div class="col-md-6 mb-3">
+                    <input class="form-control" type="text" name="jmbg" [(ngModel)]="patientJmbg"
+                        placeholder="Unesite vas jmbg da pregledate vase predstojece rezervacije...">
+                </div>
+                <div class="col-md-2 mb-3">
+                    <button class="btn btn-primary" type="submit">Prikazi termine</button>
+                </div>
+            </div>
+        </form>
+        <div class="py-5">
+            <app-appointments-list [appointments]="appointmentsList"></app-appointments-list>
+        </div>
+    </div>
+</div>

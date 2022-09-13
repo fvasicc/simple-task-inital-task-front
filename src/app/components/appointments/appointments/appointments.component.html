@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-2">
+        {{appointment.start | date:'dd/MM/yyyy'}}
+    </div>
+    <div class="col-sm-2">
+        {{appointment.start | date:'HH:mm'}}
+    </div>
+    <div class="col-sm-2">
+        {{appointment.end | date:'HH:mm'}}
+    </div>
+    <div class="col-sm-4">
+        {{appointment.description}}
+    </div>
+    <div class="col-sm-2">
+        <button class="btn btn-secondary" (click)="openDeleteConfirmModal()" type="button" style="margin: 1px;">Otkazi</button>
+    </div>
+</div>
+<app-appointment-delete-modal [appointment]="appointment"></app-appointment-delete-modal>

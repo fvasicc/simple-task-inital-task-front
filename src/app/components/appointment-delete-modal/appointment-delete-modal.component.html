@@ -1,0 +1,20 @@
+<div class="modal modal-bg" tabindex="-1" role="dialog" [ngStyle]="{'display': display}">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h2 class="modal-title mb-0">Otkazivanje rezervacije</h2>
+                <button type="button" class="btn btn-default text-white mb-0" aria-label="Close" data-dismiss="modal"
+                    (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>Da li ste sigurni da zelite da otkazete rezervaciju?</p>
+                <p>Ova radnja ne moze biti opozvana. </p>
+                <p>Ako ste sigurni da zelite da otkazete rezervaciju kliknite na dugme 'Otkazi rezervaciju'</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default text-white" (click)="postponeReservation()">Otkazi rezervaciju</button>
+                <button type="button" class="btn btn-default text-white" (click)="onCloseHandled()">Zatvori</button>
+            </div>
+        </div>
+    </div>
+</div>

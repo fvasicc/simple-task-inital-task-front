@@ -1,0 +1,73 @@
+<form (ngSubmit)="submit()">
+    <div class="form row">
+        <div class="col-md-6 mb-3">
+            <label>Ime</label>
+            <input type="text" class="form-control" name="name" [(ngModel)]="appointment.patientInfo.name"
+                placeholder="Unesite svoje ime..." />
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Prezime</label>
+            <input type="text" class="form-control" name="surname" [(ngModel)]="appointment.patientInfo.surname"
+                placeholder="Unesite svoje prezime..." />
+        </div>
+    </div>
+    <div class="form row">
+        <div class="col-md-4 mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="appointment.patientInfo.email"
+                placeholder="Unesite svoj email..." />
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Broj telefona</label>
+            <input type="text" class="form-control" name="phoneNumber" [(ngModel)]="appointment.patientInfo.phoneNumber"
+                placeholder="Unesite svoje broj telefona..." />
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Jmbg</label>
+            <input type="text" class="form-control" name="jmbg" [(ngModel)]="appointment.patientInfo.jmbg"
+                placeholder="Unesite svoj jmbg..." />
+        </div>
+    </div>
+    <div class="form row">
+        <div class="col-md-4 mb-3">
+            <label>Izaberi datum</label>
+            <input type="date" class="form-control" name="date" [(ngModel)]="date"
+                (ngModelChange)="getFreeApointments()" />
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Duzina termina</label>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" style="width: 100%;"
+                        (click)="setAppointmentLength(30)">pola sata</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" style="width: 100%;"
+                        (click)="setAppointmentLength(60)">sat</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Izaberi slobodan termin</label>
+            <select class="form-select" name="freeAppointment" [(ngModel)]="selectedAppointment"
+                (ngModelChange)="changeAppointmentTime()">
+                <option *ngFor="let appointment of freeApointments" [ngValue]="appointment">{{appointment.start |
+                    date:'HH:mm'}}
+                    -
+                    {{appointment.end | date:'HH:mm'}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form row">
+        <div class="col-md-12 mb-3">
+            <textarea name="description" class="form-control" [(ngModel)]="appointment.description"
+                placeholder="Unesite sto precizniji opis..."></textarea>
+        </div>
+    </div>
+    <div class="form row" style="text-align: center;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <button class="btn btn-primary" style="width: 100%;" type="submit">Zakazi</button>
+        </div>
+    </div>
+</form>

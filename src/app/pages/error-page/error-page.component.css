@@ -1,0 +1,25 @@
+.error-page {
+    background-color: #d8d8d8;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.error-page h1 {
+    font-weight: 500;
+    font-weight: bold;
+    font-size: 200px;
+    height: 220px;
+}
+
+.error-page h4 {
+    font-weight: 400;
+    font-weight: bold;
+}

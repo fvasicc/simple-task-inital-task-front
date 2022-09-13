@@ -1,0 +1,20 @@
+<div class="container py-5">
+    <div class="row" style="text-align: center;">
+        <h1>Welcome</h1>
+    </div>
+    <form *ngIf="!isDentistLogged()" (ngSubmit)="checkDentist()">
+        <div class="form row mb-2">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <input class="form-control" type="password" name="key" [(ngModel)]="key"
+                    placeholder="Prijava za zubara" />
+            </div>
+        </div>
+        <div class="form row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6" style="text-align: center;">
+                <button class="btn btn-primary" type="submit">Prijavi se</button>
+            </div>
+        </div>
+    </form>
+</div>

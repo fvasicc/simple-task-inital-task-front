@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="py-5">
+        <div class="row mb-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <input type="date" name="date" class="form-control" [(ngModel)]="date"
+                    (ngModelChange)="getAppointmentsByDate()" />
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div class="btn-group mr-2 mr-2" role="group">
+                <button type="button" class="btn btn-secondary" (click)="getTodayAppointments()">Danas</button>
+                <button type="button" class="btn btn-secondary" (click)="getCurrentWeekAppointments()">Trenutna nedelja</button>
+                <button type="button" class="btn btn-secondary" (click)="getAppointmentsByDate()">Dnevno</button>
+                <button type="button" class="btn btn-secondary" (click)="getAppointmentsForWeek()">Nedeljno</button>
+            </div>
+        </div>
+        <div class="py-5">
+            <app-appointments-list [appointments]="appointmentsList"></app-appointments-list>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="row" style="border-bottom: solid 2px black;">
+    <div class="col-sm-2">
+        Datum
+    </div>
+    <div class="col-sm-2">
+        Pocetak
+    </div>
+    <div class="col-sm-2">
+        Kraj
+    </div>
+    <div class="col-sm-4">
+        Opis
+    </div>
+    <div class="col-sm-2">
+        Otkazi
+    </div>
+</div>
+<app-appointments [appointment]="appointment" *ngFor="let appointment of appointments"></app-appointments>
