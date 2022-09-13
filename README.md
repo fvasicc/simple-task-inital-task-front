@@ -1,5 +1,9 @@
 # SimpleTaskFront
 
+## Napomena 
+
+U projektu je pre pokretanja potrebno pokrenuti sledece komande <code>npm install</code> <code>npm install boostrap</code> i <code>npm install jquery</code>
+ 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server
